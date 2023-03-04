@@ -1,0 +1,290 @@
+/* --------------- Products --------------- */
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #d1d1d1;
+    padding: 3em;
+}
+
+.product-list .product{
+    background-color: #d1d1d1;
+    border-radius: 10px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #b3b3b3;
+    text-align: center;
+
+}
+.product-list h1{
+	font-size: 50px;
+	font-weight: 700%;
+	text-align: center;
+}
+
+.product .product-name{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product img{
+    max-width: 100%;
+    border-radius: 10px;
+	transition:0.1s;
+}
+.product img:hover{
+	transform:scale(1.5);
+	z-index:1;
+}
+
+.product .description{
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.shirt-size-selector{
+    display: flex;
+    margin-bottom: 0.5em;
+    border: 1px solid #56CCF2;
+    padding: 4px;
+}
+
+.btn{
+    background-color: #3d3d3d; 
+    color: #d1d1d1;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color:  #555555;
+}
+
+.product-section{
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.product-section > *{
+    flex: 1 1 15em;
+}
+
+
+/* Actual adding and removing */
+
+.section-header {
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    color: #d1d1d1;
+    display: block;
+    margin: 20px auto 20px auto;
+    font-size: 1em;
+    background-color: #3d3d3d;
+    padding: 10px;
+    border-style: none;
+    border: 1px solid black;
+}
+
+.btn-danger {
+    color: #d1d1d1;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+/* modal popup */
+
+.modal-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-container.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+.modal{
+    position: relative;
+    background-color: #d1d1d1;
+    max-width: 100%;
+    padding: 5px 50px;
+    border-radius: 5px;
+
+}
+
+.modal h1{
+    font-size: 20px;
+}
+
+.close-button{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.proceed {
+    color: #d1d1d1;
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+    background-color: #3d3d3d;
+    padding: 20px;
+    border-style: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Payment */
+
+.form-control{
+    padding-bottom: 10px;
+    position: relative;
+
+}
+
+.form-control label{
+    display: inline-block;
+}
+
+.form-control input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+
+.payment-selector{
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid #56CCF2;
+
+}
+
+.MoP{
+    display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.option{
+    flex-basis: 50%;
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+    display: block;
+    padding: 10px;
+    width: 200px;
+}
+
+#error_message{
+    margin-bottom: 20px;
+    padding: 0px;
+    background-color: #fe8b8e;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
